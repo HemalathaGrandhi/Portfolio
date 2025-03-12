@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemalatha Grandhi - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            background: #0073e6;
+            padding: 15px;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #00aaff;
+        }
+        section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #00aaff;
+        }
+        .home {
+            background: linear-gradient(to right, #0073e6, #00aaff);
+            color: white;
+            border-radius: 10px;
+            margin: 80px 20px 20px 20px;
+            padding: 50px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .skills ul, .samples ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills ul li, .samples ul li {
+            background: #222;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .skills ul li:hover, .samples ul li:hover {
+            background: #0073e6;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll("nav ul li a");
+            links.forEach(link => {
+                link.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    const targetId = link.getAttribute("href").substring(1);
+                    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#samples">Samples</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm <strong>Hemalatha Grandhi</strong>, a passionate <strong>Content Writer, Blogger, and Lead Generator</strong>. I create impactful content, generate high-quality leads, and help brands grow with creative strategies.</p>
+    </section>
+    
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>As a creative and strategic thinker, I specialize in crafting engaging blog posts, persuasive marketing copy, and high-converting lead generation strategies. My expertise spans content writing, SEO optimization, social media marketing, and digital branding. I thrive on helping businesses establish a strong online presence and connect with their audience effectively.</p>
+    </section>
+    
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>📝 Content Writing & Blogging</li>
+            <li>📈 SEO & Keyword Optimization</li>
+            <li>📢 Social Media Content Strategy</li>
+            <li>🎯 Lead Generation & Outreach</li>
+            <li>💡 Brand Storytelling & Copywriting</li>
+            <li>🔍 Market Research & Audience Analysis</li>
+            <li>📊 Analytics & Performance Tracking</li>
+            <li>📌 Email Marketing & Campaign Management</li>
+            <li>🚀 Growth Hacking Strategies</li>
+        </ul>
+    </section>
+    
+    <section id="work" class="work">
+        <h2>Work Experience</h2>
+        <h3>Freelance Content Writer & Blogger</h3>
+        <p>Developed high-quality blogs, optimized SEO, and created compelling marketing content for multiple clients across various industries, enhancing their digital presence.</p>
+        <h3>Lead Generator</h3>
+        <p>Specialized in identifying, engaging, and converting leads using targeted digital marketing strategies, helping businesses expand their clientele.</p>
+        <h3>Marketing Strategist</h3>
+        <p>Worked on digital marketing campaigns, analyzed market trends, and developed engagement strategies to boost online branding.</p>
+    </section>
+    
+    <section id="samples" class="samples">
+        <h2>Sample Works</h2>
+        <ul>
+            <li><a href="https://docs.google.com/document/d/1FBXazFu0B5V4uuxQOUaJNakmIo67_SwHgI2qu97gb_c/edit?usp=sharing">SEO Blog: "How to Rank #1 on Google"</a></li>
+            <li><a href="https://docs.google.com/document/d/12OLyg5LzqT50N5Q6kKtZG_smrFBrn3U6J1SaBwxXGbI/edit?usp=sharing">Marketing Copy: "Boost Your Brand with Content"</a></li>
+            <li><a href="https://docs.google.com/document/d/1S6O7txa-oOTCa9Lqsw8e3B5mkcmCOsUh92TcTTTKKpA/edit?usp=sharing">Case Study: "Lead Generation Success Story"</a></li>
+            <li><a href="https://docs.google.com/document/d/18kVqeh-6A4vZaXs3MUeX5Avf9VQhL2uKwL4zc_f8H1o/edit?usp=sharing">Email Campaign: "Convert Leads into Customers"</a></li>
+        </ul>
+    </section>
+    
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>📧 Email: <a href="mailto:hemalathagrandhi19@gmail.com" style="color: #00aaff;">hemalathagrandhi19@gmail.com</a></p>
+        <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/hemalatha-grandhi-848051271/" target="_blank" style="color: #00aaff;">Visit My LinkedIn</a></p>
+
+    </section>
+</body>
+</html>
