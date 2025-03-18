@@ -5,20 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hemalatha Grandhi - Portfolio</title>
     <style>
+        /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000;
-            color: #fff;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #333; /* Dark gray for text */
+            line-height: 1.6;
             scroll-behavior: smooth;
         }
-        nav ul {
-            display: flex;
-            list-style: none;
-            background: #0073e6;
-            padding: 15px;
-            justify-content: center;
+
+        h1, h2, h3 {
+            color: #2c3e50; /* Dark blue for headings */
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: #34495e; /* Slightly lighter blue for subheadings */
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #555; /* Medium gray for paragraphs */
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        a {
+            color: #3498db; /* Bright blue for links */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #2980b9; /* Darker blue on hover */
+        }
+
+        /* Navigation */
+        nav {
+            background: #2c3e50; /* Dark blue for nav */
+            padding: 15px 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
@@ -26,61 +65,350 @@
             left: 0;
             z-index: 1000;
         }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
         nav ul li {
             margin: 0 20px;
         }
+
         nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
+            color: #fff; /* White for nav links */
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
         }
+
         nav ul li a:hover {
-            text-decoration: underline;
-            color: #00aaff;
+            color: #3498db; /* Bright blue on hover */
         }
+
+        /* Sections */
         section {
             padding: 100px 20px;
             text-align: center;
         }
-        h2 {
-            color: #00aaff;
-        }
+
+        /* Home Section */
         .home {
-            background: linear-gradient(to right, #0073e6, #00aaff);
-            color: white;
-            border-radius: 10px;
+            background: linear-gradient(135deg, #3498db, #2c3e50); /* Gradient background */
+            color: #fff;
+            padding: 150px 20px;
             margin: 80px 20px 20px 20px;
-            padding: 50px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
         }
-        .skills ul, .samples ul {
+
+        .home h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .home p {
+            font-size: 1.3rem;
+            color: #ecf0f1; /* Light gray for text */
+            animation: fadeInUp 1s ease-in-out 0.5s;
+            animation-fill-mode: both;
+        }
+
+        /* About Section */
+        .about {
+    background: #fff; /* White background */
+    padding: 100px 20px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    color: #2c3e50; /* Dark blue for heading */
+    margin-bottom: 40px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #555; /* Medium gray for text */
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #3498db; /* Bright blue for highlighted text */
+    font-weight: 600;
+}
+
+.about-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about-list li {
+    background: #f8f9fa; /* Light gray background for list items */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-list li strong {
+    color: #3498db; /* Bright blue for emphasis */
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+        /* Skills Section */
+        .skills ul {
             list-style-type: none;
             padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
         }
-        .skills ul li, .samples ul li {
-            background: #222;
-            padding: 10px;
-            margin: 5px;
+
+        .skills ul li {
+            background: #fff; /* White background for list items */
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skills ul li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills ul li {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        /* Work Section */
+        .work {
+            background: #fff; /* White background */
+            padding: 100px 20px;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .work h2 {
+            color: #2c3e50; /* Dark blue for heading */
+            margin-bottom: 40px;
+        }
+
+        .work h3 {
+            color: #34495e; /* Slightly lighter blue for subheadings */
+            margin-bottom: 10px;
+        }
+
+        .work p {
+            color: #555; /* Medium gray for text */
+        }
+
+        /* Samples Section */
+        .samples ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .samples ul li {
+            background: #fff; /* White background for list items */
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .samples ul li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .samples ul li a {
+            color: #3498db; /* Bright blue for links */
+        }
+
+        .samples ul li a:hover {
+            color: #2980b9; /* Darker blue on hover */
+        }
+
+        /* Tools Section */
+        .tools ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tools ul li {
+            background: #fff; /* White background for list items */
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tools ul li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .tools ul li {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #fff; /* White background */
+            padding: 100px 20px;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact h2 {
+            color: #2c3e50; /* Dark blue for heading */
+            margin-bottom: 40px;
+        }
+
+        .contact p {
+            color: #555; /* Medium gray for text */
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            background: #f8f9fa; /* Light gray background for contact items */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 1 1 250px;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-item h3 {
+            color: #3498db; /* Bright blue for subheadings */
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            color: #333; /* Dark gray for text */
+            margin: 0;
+        }
+
+        .cta-button {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .cta-button .btn {
+            background: #3498db; /* Bright blue for button */
+            color: #fff; /* White for button text */
+            padding: 12px 24px;
+            border: none;
             border-radius: 5px;
-            transition: 0.3s;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
-        .skills ul li:hover, .samples ul li:hover {
-            background: #0073e6;
+
+        .cta-button .btn:hover {
+            background: #2980b9; /* Darker blue on hover */
+            transform: translateY(-3px);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const links = document.querySelectorAll("nav ul li a");
-            links.forEach(link => {
-                link.addEventListener("click", (event) => {
-                    event.preventDefault();
-                    const targetId = link.getAttribute("href").substring(1);
-                    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
-                });
-            });
-        });
-    </script>
 </head>
 <body>
     <header>
@@ -91,21 +419,38 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#samples">Samples</a></li>
+                <li><a href="#tools">Tools</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
+
+    <!-- Home Section -->
     <section id="home" class="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm <strong>Hemalatha Grandhi</strong>, a passionate <strong>Content Writer, Blogger, and Lead Generator</strong>. I create impactful content, generate high-quality leads, and help brands grow with creative strategies.</p>
+        <h1>Hemalatha Grandhi</h1>
+        <p><strong>Content Writer | Blogger | Lead Generator</strong></p>
+        <p>I create impactful content, generate high-quality leads, and help brands tell their story. Let’s collaborate and bring your vision to life.</p>
     </section>
-    
+
+    <!-- About Section -->
     <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>As a creative and strategic thinker, I specialize in crafting engaging blog posts, persuasive marketing copy, and high-converting lead generation strategies. My expertise spans content writing, SEO optimization, social media marketing, and digital branding. I thrive on helping businesses establish a strong online presence and connect with their audience effectively.</p>
-    </section>
-    
+    <h2>About Me</h2>
+    <div class="about-content">
+        <div class="about-text">
+            <p>Hi, I’m <strong>Hemalatha Grandhi</strong>, a passionate and driven <strong>Content Writer, Blogger, and Lead Generation Enthusiast</strong>. As a fresher, I bring a fresh perspective, a hunger to learn, and a commitment to delivering high-quality work that makes an impact.</p>
+            <p>I specialize in crafting engaging content, optimizing SEO, and designing strategies to generate leads. My goal is to help brands tell their story, connect with their audience, and achieve their business objectives. With a strong foundation in <span class="highlight">content creation</span>, <span class="highlight">digital marketing</span>, and <span class="highlight">audience engagement</span>, I’m ready to contribute to your success.</p>
+            <p>Here’s what sets me apart:</p>
+            <ul class="about-list">
+                <li>🚀 <strong>Quick Learner:</strong> I adapt quickly to new tools, trends, and challenges, ensuring I stay ahead in the ever-evolving digital landscape.</li>
+                <li>💡 <strong>Creative Thinker:</strong> I thrive on turning ideas into compelling narratives and strategies that resonate with audiences.</li>
+                <li>📊 <strong>Detail-Oriented:</strong> From research to execution, I pay attention to every detail to deliver polished and effective results.</li>
+                <li>🤝 <strong>Team Player:</strong> I believe in collaboration and communication to achieve shared goals.</li>
+            </ul>
+            <p>I’m excited to bring my skills and enthusiasm to your team. Let’s create something amazing together!</p>
+        </div>
+    </div>
+</section>
+    <!-- Skills Section -->
     <section id="skills" class="skills">
         <h2>Skills</h2>
         <ul>
@@ -120,7 +465,8 @@
             <li>🚀 Growth Hacking Strategies</li>
         </ul>
     </section>
-    
+
+    <!-- Work Section -->
     <section id="work" class="work">
         <h2>Work Experience</h2>
         <h3>Freelance Content Writer & Blogger</h3>
@@ -130,7 +476,8 @@
         <h3>Marketing Strategist</h3>
         <p>Worked on digital marketing campaigns, analyzed market trends, and developed engagement strategies to boost online branding.</p>
     </section>
-    
+
+    <!-- Samples Section -->
     <section id="samples" class="samples">
         <h2>Sample Works</h2>
         <ul>
@@ -140,12 +487,43 @@
             <li><a href="https://docs.google.com/document/d/18kVqeh-6A4vZaXs3MUeX5Avf9VQhL2uKwL4zc_f8H1o/edit?usp=sharing">Email Campaign: "Convert Leads into Customers"</a></li>
         </ul>
     </section>
-    
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>📧 Email: <a href="mailto:hemalathagrandhi19@gmail.com" style="color: #00aaff;">hemalathagrandhi19@gmail.com</a></p>
-        <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/hemalatha-grandhi-848051271/" target="_blank" style="color: #00aaff;">Visit My LinkedIn</a></p>
 
+    <!-- Tools Section -->
+    <section id="tools" class="tools">
+        <h2>Tools I Use</h2>
+        <ul>
+            <li>📝 <strong>Content Writing:</strong> Grammarly, Hemingway Editor, Google Docs</li>
+            <li>🔍 <strong>SEO Optimization:</strong> SEMrush, Ahrefs, Yoast SEO</li>
+            <li>📊 <strong>Analytics:</strong> Google Analytics, Google Search Console</li>
+            <li>📢 <strong>Social Media Management:</strong> Hootsuite, Buffer, Canva</li>
+            <li>📧 <strong>Email Marketing:</strong> Mailchimp, ConvertKit</li>
+            <li>🎯 <strong>Lead Generation:</strong> LinkedIn Sales Navigator, Hunter.io, Apollo.io</li>
+            <li>🚀 <strong>Project Management:</strong> Trello, Asana, Notion</li>
+            <li>💡 <strong>Keyword Research:</strong> Ubersuggest, AnswerThePublic</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Let's Work Together</h2>
+        <p>I’m always excited to collaborate on new projects, discuss ideas, or help you achieve your business goals. Whether you need compelling content, a lead generation strategy, or a creative marketing campaign, I’m here to make it happen.</p>
+        <div class="contact-details">
+            <div class="contact-item">
+                <h3>📧 Email</h3>
+                <p><a href="mailto:hemalathagrandhi19@gmail.com">hemalathagrandhi19@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>🔗 LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/hemalatha-grandhi-848051271/" target="_blank">Connect with me on LinkedIn</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>🚀 Portfolio</h3>
+                <p><a href="https://hemalathagrandhi.github.io/Portfolio/" target="_blank">View My Portfolio</a></p>
+            </div>
+        </div>
+        <div class="cta-button">
+            <a href="#contact" class="btn">Let’s Work Together</a>
+        </div>
     </section>
 </body>
 </html>
